@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="UniTezDataSet3" targetNamespace="http://tempuri.org/UniTezDataSet3.xsd" xmlns:mstns="http://tempuri.org/UniTezDataSet3.xsd" xmlns="http://tempuri.org/UniTezDataSet3.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="UniTezConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="UniTezConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.UniTez.Properties.Settings.GlobalReference.Default.UniTezConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AkademikBolumTableAdapter" GeneratorDataComponentClassName="AkademikBolumTableAdapter" Name="AkademikBolum" UserDataComponentName="AkademikBolumTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="UniTezConnectionString (Settings)" DbObjectName="UniTez.dbo.AkademikBolum" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT BolumAdi FROM dbo.AkademikBolum</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="BolumAdi" DataSetColumn="BolumAdi" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AkademikProgramTableAdapter" GeneratorDataComponentClassName="AkademikProgramTableAdapter" Name="AkademikProgram" UserDataComponentName="AkademikProgramTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="UniTezConnectionString (Settings)" DbObjectName="UniTez.dbo.AkademikProgram" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ProgramAdi FROM dbo.AkademikProgram</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ProgramAdi" DataSetColumn="ProgramAdi" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TezTableAdapter" GeneratorDataComponentClassName="TezTableAdapter" Name="Tez" UserDataComponentName="TezTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="UniTezConnectionString (Settings)" DbObjectName="UniTez.dbo.Tez" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[Tez] WHERE (([TezID] = @Original_TezID) AND ([TezAdi] = @Original_TezAdi) AND ([OlusturulmaTarihi] = @Original_OlusturulmaTarihi))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_TezID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="TezID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_TezAdi" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="TezAdi" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_OlusturulmaTarihi" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="OlusturulmaTarihi" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT TezID, TezAdi, OlusturulmaTarihi FROM dbo.Tez</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[Tez] SET [TezAdi] = @TezAdi, [OlusturulmaTarihi] = @OlusturulmaTarihi WHERE (([TezID] = @Original_TezID) AND ([TezAdi] = @Original_TezAdi) AND ([OlusturulmaTarihi] = @Original_OlusturulmaTarihi));
+SELECT TezID, TezAdi, OlusturulmaTarihi FROM Tez WHERE (TezID = @TezID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@TezAdi" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="TezAdi" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@OlusturulmaTarihi" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="OlusturulmaTarihi" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_TezID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="TezID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_TezAdi" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="TezAdi" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_OlusturulmaTarihi" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="OlusturulmaTarihi" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="TezID" ColumnName="TezID" DataSourceName="UniTez.dbo.Tez" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@TezID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="TezID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TezID" DataSetColumn="TezID" />
+              <Mapping SourceColumn="TezAdi" DataSetColumn="TezAdi" />
+              <Mapping SourceColumn="OlusturulmaTarihi" DataSetColumn="OlusturulmaTarihi" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TezDiliTableAdapter" GeneratorDataComponentClassName="TezDiliTableAdapter" Name="TezDili" UserDataComponentName="TezDiliTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="UniTezConnectionString (Settings)" DbObjectName="UniTez.dbo.TezDili" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[TezDili] ([DilAdi]) VALUES (@DilAdi)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@DilAdi" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DilAdi" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT DilAdi FROM dbo.TezDili</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="DilAdi" DataSetColumn="DilAdi" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TezDurumTableAdapter" GeneratorDataComponentClassName="TezDurumTableAdapter" Name="TezDurum" UserDataComponentName="TezDurumTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="UniTezConnectionString (Settings)" DbObjectName="UniTez.dbo.TezDurum" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[TezDurum] ([DurumAdi]) VALUES (@DurumAdi)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@DurumAdi" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DurumAdi" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT DurumAdi FROM dbo.TezDurum</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="DurumAdi" DataSetColumn="DurumAdi" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TezTuruTableAdapter" GeneratorDataComponentClassName="TezTuruTableAdapter" Name="TezTuru" UserDataComponentName="TezTuruTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="UniTezConnectionString (Settings)" DbObjectName="UniTez.dbo.TezTuru" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[TezTuru] ([TurAdi]) VALUES (@TurAdi)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@TurAdi" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="TurAdi" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT TurAdi FROM dbo.TezTuru</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TurAdi" DataSetColumn="TurAdi" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="UniTezDataSet3" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="UniTezDataSet3" msprop:Generator_UserDSName="UniTezDataSet3">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="AkademikBolum" msprop:Generator_TableClassName="AkademikBolumDataTable" msprop:Generator_TableVarName="tableAkademikBolum" msprop:Generator_TablePropName="AkademikBolum" msprop:Generator_RowDeletingName="AkademikBolumRowDeleting" msprop:Generator_RowChangingName="AkademikBolumRowChanging" msprop:Generator_RowEvHandlerName="AkademikBolumRowChangeEventHandler" msprop:Generator_RowDeletedName="AkademikBolumRowDeleted" msprop:Generator_UserTableName="AkademikBolum" msprop:Generator_RowChangedName="AkademikBolumRowChanged" msprop:Generator_RowEvArgName="AkademikBolumRowChangeEvent" msprop:Generator_RowClassName="AkademikBolumRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BolumAdi" msprop:Generator_ColumnVarNameInTable="columnBolumAdi" msprop:Generator_ColumnPropNameInRow="BolumAdi" msprop:Generator_ColumnPropNameInTable="BolumAdiColumn" msprop:Generator_UserColumnName="BolumAdi">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AkademikProgram" msprop:Generator_TableClassName="AkademikProgramDataTable" msprop:Generator_TableVarName="tableAkademikProgram" msprop:Generator_TablePropName="AkademikProgram" msprop:Generator_RowDeletingName="AkademikProgramRowDeleting" msprop:Generator_RowChangingName="AkademikProgramRowChanging" msprop:Generator_RowEvHandlerName="AkademikProgramRowChangeEventHandler" msprop:Generator_RowDeletedName="AkademikProgramRowDeleted" msprop:Generator_UserTableName="AkademikProgram" msprop:Generator_RowChangedName="AkademikProgramRowChanged" msprop:Generator_RowEvArgName="AkademikProgramRowChangeEvent" msprop:Generator_RowClassName="AkademikProgramRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ProgramAdi" msprop:Generator_ColumnVarNameInTable="columnProgramAdi" msprop:Generator_ColumnPropNameInRow="ProgramAdi" msprop:Generator_ColumnPropNameInTable="ProgramAdiColumn" msprop:Generator_UserColumnName="ProgramAdi">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Tez" msprop:Generator_TableClassName="TezDataTable" msprop:Generator_TableVarName="tableTez" msprop:Generator_TablePropName="Tez" msprop:Generator_RowDeletingName="TezRowDeleting" msprop:Generator_RowChangingName="TezRowChanging" msprop:Generator_RowEvHandlerName="TezRowChangeEventHandler" msprop:Generator_RowDeletedName="TezRowDeleted" msprop:Generator_UserTableName="Tez" msprop:Generator_RowChangedName="TezRowChanged" msprop:Generator_RowEvArgName="TezRowChangeEvent" msprop:Generator_RowClassName="TezRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TezID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnTezID" msprop:Generator_ColumnPropNameInRow="TezID" msprop:Generator_ColumnPropNameInTable="TezIDColumn" msprop:Generator_UserColumnName="TezID" type="xs:int" />
+              <xs:element name="TezAdi" msprop:Generator_ColumnVarNameInTable="columnTezAdi" msprop:Generator_ColumnPropNameInRow="TezAdi" msprop:Generator_ColumnPropNameInTable="TezAdiColumn" msprop:Generator_UserColumnName="TezAdi">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OlusturulmaTarihi" msprop:Generator_ColumnVarNameInTable="columnOlusturulmaTarihi" msprop:Generator_ColumnPropNameInRow="OlusturulmaTarihi" msprop:Generator_ColumnPropNameInTable="OlusturulmaTarihiColumn" msprop:Generator_UserColumnName="OlusturulmaTarihi" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TezDili" msprop:Generator_TableClassName="TezDiliDataTable" msprop:Generator_TableVarName="tableTezDili" msprop:Generator_TablePropName="TezDili" msprop:Generator_RowDeletingName="TezDiliRowDeleting" msprop:Generator_RowChangingName="TezDiliRowChanging" msprop:Generator_RowEvHandlerName="TezDiliRowChangeEventHandler" msprop:Generator_RowDeletedName="TezDiliRowDeleted" msprop:Generator_UserTableName="TezDili" msprop:Generator_RowChangedName="TezDiliRowChanged" msprop:Generator_RowEvArgName="TezDiliRowChangeEvent" msprop:Generator_RowClassName="TezDiliRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DilAdi" msprop:Generator_ColumnVarNameInTable="columnDilAdi" msprop:Generator_ColumnPropNameInRow="DilAdi" msprop:Generator_ColumnPropNameInTable="DilAdiColumn" msprop:Generator_UserColumnName="DilAdi">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TezDurum" msprop:Generator_TableClassName="TezDurumDataTable" msprop:Generator_TableVarName="tableTezDurum" msprop:Generator_TablePropName="TezDurum" msprop:Generator_RowDeletingName="TezDurumRowDeleting" msprop:Generator_RowChangingName="TezDurumRowChanging" msprop:Generator_RowEvHandlerName="TezDurumRowChangeEventHandler" msprop:Generator_RowDeletedName="TezDurumRowDeleted" msprop:Generator_UserTableName="TezDurum" msprop:Generator_RowChangedName="TezDurumRowChanged" msprop:Generator_RowEvArgName="TezDurumRowChangeEvent" msprop:Generator_RowClassName="TezDurumRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DurumAdi" msprop:Generator_ColumnVarNameInTable="columnDurumAdi" msprop:Generator_ColumnPropNameInRow="DurumAdi" msprop:Generator_ColumnPropNameInTable="DurumAdiColumn" msprop:Generator_UserColumnName="DurumAdi">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TezTuru" msprop:Generator_TableClassName="TezTuruDataTable" msprop:Generator_TableVarName="tableTezTuru" msprop:Generator_TablePropName="TezTuru" msprop:Generator_RowDeletingName="TezTuruRowDeleting" msprop:Generator_RowChangingName="TezTuruRowChanging" msprop:Generator_RowEvHandlerName="TezTuruRowChangeEventHandler" msprop:Generator_RowDeletedName="TezTuruRowDeleted" msprop:Generator_UserTableName="TezTuru" msprop:Generator_RowChangedName="TezTuruRowChanged" msprop:Generator_RowEvArgName="TezTuruRowChangeEvent" msprop:Generator_RowClassName="TezTuruRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TurAdi" msprop:Generator_ColumnVarNameInTable="columnTurAdi" msprop:Generator_ColumnPropNameInRow="TurAdi" msprop:Generator_ColumnPropNameInTable="TurAdiColumn" msprop:Generator_UserColumnName="TurAdi">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Tez" />
+      <xs:field xpath="mstns:TezID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

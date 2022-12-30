@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4D5A57B3-CE9F-4A04-AD64-FB6CECD51446}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>UniTez</RootNamespace>
+    <AssemblyName>UniTez</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DanismanAnaSayfa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanismanAnaSayfa.Designer.cs">
+      <DependentUpon>DanismanAnaSayfa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Danisman_Bilgilerim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Danisman_Bilgilerim.Designer.cs">
+      <DependentUpon>Danisman_Bilgilerim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Danisman_DevamEdenTezler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Danisman_DevamEdenTezler.Designer.cs">
+      <DependentUpon>Danisman_DevamEdenTezler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Danisman_OlusmusTezler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Danisman_OlusmusTezler.Designer.cs">
+      <DependentUpon>Danisman_OlusmusTezler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Danisman_TezBasvuru.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Danisman_TezBasvuru.Designer.cs">
+      <DependentUpon>Danisman_TezBasvuru.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Danisman_TezOlustur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Danisman_TezOlustur.Designer.cs">
+      <DependentUpon>Danisman_TezOlustur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Danisman_TezOneri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Danisman_TezOneri.Designer.cs">
+      <DependentUpon>Danisman_TezOneri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ogr_BitirmeTezim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ogr_BitirmeTezim.Designer.cs">
+      <DependentUpon>Ogr_BitirmeTezim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ogr_TezOner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ogr_TezOner.Designer.cs">
+      <DependentUpon>Ogr_TezOner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GirisEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GirisEkrani.Designer.cs">
+      <DependentUpon>GirisEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KayitOlEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KayitOlEkrani.Designer.cs">
+      <DependentUpon>KayitOlEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OgrenciAnaSayfa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OgrenciAnaSayfa.Designer.cs">
+      <DependentUpon>OgrenciAnaSayfa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ogr_Bilgilerim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ogr_Bilgilerim.Designer.cs">
+      <DependentUpon>Ogr_Bilgilerim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ogr_TezBasOne.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ogr_TezBasOne.Designer.cs">
+      <DependentUpon>Ogr_TezBasOne.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ogr_TezBasvur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ogr_TezBasvur.Designer.cs">
+      <DependentUpon>Ogr_TezBasvur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UniTezDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UniTezDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UniTezDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UniTezDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UniTezDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UniTezDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UniTezDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UniTezDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UniTezDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UniTezDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UniTezDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UniTezDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UniTezDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UniTezDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Yardimci.cs" />
+    <EmbeddedResource Include="DanismanAnaSayfa.resx">
+      <DependentUpon>DanismanAnaSayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Danisman_Bilgilerim.resx">
+      <DependentUpon>Danisman_Bilgilerim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Danisman_DevamEdenTezler.resx">
+      <DependentUpon>Danisman_DevamEdenTezler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Danisman_OlusmusTezler.resx">
+      <DependentUpon>Danisman_OlusmusTezler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Danisman_TezBasvuru.resx">
+      <DependentUpon>Danisman_TezBasvuru.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Danisman_TezOlustur.resx">
+      <DependentUpon>Danisman_TezOlustur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Danisman_TezOneri.resx">
+      <DependentUpon>Danisman_TezOneri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ogr_BitirmeTezim.resx">
+      <DependentUpon>Ogr_BitirmeTezim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ogr_TezOner.resx">
+      <DependentUpon>Ogr_TezOner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GirisEkrani.resx">
+      <DependentUpon>GirisEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KayitOlEkrani.resx">
+      <DependentUpon>KayitOlEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OgrenciAnaSayfa.resx">
+      <DependentUpon>OgrenciAnaSayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ogr_Bilgilerim.resx">
+      <DependentUpon>Ogr_Bilgilerim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ogr_TezBasOne.resx">
+      <DependentUpon>Ogr_TezBasOne.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ogr_TezBasvur.resx">
+      <DependentUpon>Ogr_TezBasvur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="UniTezDataSet.xsc">
+      <DependentUpon>UniTezDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="UniTezDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UniTezDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UniTezDataSet.xss">
+      <DependentUpon>UniTezDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="UniTezDataSet1.xsc">
+      <DependentUpon>UniTezDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="UniTezDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UniTezDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UniTezDataSet1.xss">
+      <DependentUpon>UniTezDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="UniTezDataSet2.xsc">
+      <DependentUpon>UniTezDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="UniTezDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UniTezDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UniTezDataSet2.xss">
+      <DependentUpon>UniTezDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="UniTezDataSet3.xsc">
+      <DependentUpon>UniTezDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="UniTezDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UniTezDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UniTezDataSet3.xss">
+      <DependentUpon>UniTezDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="UniTezDataSet4.xsc">
+      <DependentUpon>UniTezDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="UniTezDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UniTezDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UniTezDataSet4.xss">
+      <DependentUpon>UniTezDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="UniTezDataSet5.xsc">
+      <DependentUpon>UniTezDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="UniTezDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UniTezDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UniTezDataSet5.xss">
+      <DependentUpon>UniTezDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="UniTezDataSet6.xsc">
+      <DependentUpon>UniTezDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="UniTezDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UniTezDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UniTezDataSet6.xss">
+      <DependentUpon>UniTezDataSet6.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
